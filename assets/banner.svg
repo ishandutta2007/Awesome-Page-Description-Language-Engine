@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a14" />
+      <stop offset="50%" stop-color="#0c1326" />
+      <stop offset="100%" stop-color="#060913" />
+    </linearGradient>
+
+    <linearGradient id="glowCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#4facfe" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="glowPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928ca" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#ff0080" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#f0f6fc" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#a78bfa" />
+    </linearGradient>
+
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1); opacity: 0.35; }
+      50% { transform: scale(1.15); opacity: 0.6; }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-40px); opacity: 0.1; }
+      50% { opacity: 0.6; }
+      100% { transform: translateY(440px); opacity: 0.1; }
+    }
+    @keyframes flowPath {
+      0% { stroke-dashoffset: 600; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatPill {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes floatPillReverse {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(6px); }
+    }
+    .pulsing-orb-1 {
+      transform-origin: 200px 180px;
+      animation: pulseOrb 8s ease-in-out infinite;
+    }
+    .pulsing-orb-2 {
+      transform-origin: 1000px 220px;
+      animation: pulseOrb 10s ease-in-out infinite reverse;
+    }
+    .scanner-bar {
+      animation: scanline 7s ease-in-out infinite;
+    }
+    .path-stream {
+      stroke-dasharray: 20, 15;
+      animation: flowPath 20s linear infinite;
+    }
+    .path-stream-fast {
+      stroke-dasharray: 10, 10;
+      animation: flowPath 12s linear infinite reverse;
+    }
+    .pill-1 { animation: floatPill 5s ease-in-out infinite; }
+    .pill-2 { animation: floatPillReverse 6s ease-in-out infinite; }
+    .pill-3 { animation: floatPill 5.5s ease-in-out infinite; }
+    .pill-4 { animation: floatPillReverse 4.8s ease-in-out infinite; }
+    .pill-5 { animation: floatPill 6.2s ease-in-out infinite; }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="420" fill="url(#bgGradient)" rx="16" />
+
+  <!-- Outer Border -->
+  <rect x="1.5" y="1.5" width="1197" height="417" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Background Grid (PDL Raster Matrix) -->
+  <g opacity="0.12">
+    <line x1="0" y1="60" x2="1200" y2="60" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="0" y1="120" x2="1200" y2="120" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="0" y1="180" x2="1200" y2="180" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="0" y1="240" x2="1200" y2="240" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="0" y1="360" x2="1200" y2="360" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="150" y1="0" x2="150" y2="420" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="300" y1="0" x2="300" y2="420" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="450" y1="0" x2="450" y2="420" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="600" y1="0" x2="600" y2="420" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="750" y1="0" x2="750" y2="420" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="900" y1="0" x2="900" y2="420" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+    <line x1="1050" y1="0" x2="1050" y2="420" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Ambient Glowing Orbs in Background -->
+  <circle class="pulsing-orb-1" cx="200" cy="180" r="140" fill="url(#glowPurple)" filter="url(#softGlow)" />
+  <circle class="pulsing-orb-2" cx="1000" cy="220" r="160" fill="url(#glowCyan)" filter="url(#softGlow)" />
+
+  <!-- Animated Vector Streams (Bézier Curves simulating PostScript paths) -->
+  <path class="path-stream" d="M -50,90 C 250,30 400,210 650,110 C 900,10 1050,190 1250,90" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.3" />
+  <path class="path-stream-fast" d="M -50,320 C 200,380 450,230 750,340 C 950,420 1100,270 1250,330" fill="none" stroke="#c084fc" stroke-width="1.8" opacity="0.25" />
+
+  <!-- Animated Raster Image Processor (RIP) Laser Scanline -->
+  <g class="scanner-bar">
+    <rect x="0" y="0" width="1200" height="2" fill="url(#laserBeam)" />
+    <rect x="0" y="-12" width="1200" height="24" fill="#38bdf8" opacity="0.04" />
+  </g>
+
+  <!-- Floating Tech Badges (Background Dynamic Elements - Kept away from center text) -->
+  <g class="pill-1">
+    <rect x="60" y="55" width="165" height="34" rx="17" fill="url(#badgeGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5" filter="url(#dropShadow)" />
+    <circle cx="80" cy="72" r="5" fill="#38bdf8" />
+    <text x="96" y="77" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5">PostScript Level 3</text>
+  </g>
+
+  <g class="pill-2">
+    <rect x="980" y="55" width="155" height="34" rx="17" fill="url(#badgeGrad)" stroke="#c084fc" stroke-width="1" stroke-opacity="0.5" filter="url(#dropShadow)" />
+    <circle cx="1000" cy="72" r="5" fill="#c084fc" />
+    <text x="1016" y="77" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5">PCL 5 / PCL-XL</text>
+  </g>
+
+  <g class="pill-3">
+    <rect x="70" y="335" width="170" height="34" rx="17" fill="url(#badgeGrad)" stroke="#4ade80" stroke-width="1" stroke-opacity="0.5" filter="url(#dropShadow)" />
+    <circle cx="90" cy="352" r="5" fill="#4ade80" />
+    <text x="106" y="357" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5">Ghostscript 10 &amp; PDL</text>
+  </g>
+
+  <g class="pill-4">
+    <rect x="990" y="335" width="150" height="34" rx="17" fill="url(#badgeGrad)" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.5" filter="url(#dropShadow)" />
+    <circle cx="1010" cy="352" r="5" fill="#fbbf24" />
+    <text x="1026" y="357" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5">CUPS &amp; RIP Filter</text>
+  </g>
+
+  <g class="pill-5">
+    <rect x="495" y="348" width="210" height="34" rx="17" fill="url(#badgeGrad)" stroke="#f472b6" stroke-width="1" stroke-opacity="0.5" filter="url(#dropShadow)" />
+    <circle cx="517" cy="365" r="5" fill="#f472b6" />
+    <text x="532" y="370" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5">Rust STET &amp; C++ Blend2D</text>
+  </g>
+
+  <!-- FOREGROUND CONTENT: Highly crisp, high contrast, permanent z-index on top -->
+  <!-- Top Category Chip -->
+  <g filter="url(#dropShadow)">
+    <rect x="440" y="62" width="320" height="30" rx="15" fill="#0f172a" stroke="#00f2fe" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="600" y="82" text-anchor="middle" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">✦ CURATED ECOSYSTEM DIRECTORY ✦</text>
+  </g>
+
+  <!-- Main Title -->
+  <g filter="url(#dropShadow)">
+    <text x="600" y="165" text-anchor="middle" fill="url(#textGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5">Page Description Language Engines</text>
+  </g>
+
+  <!-- Subtitle -->
+  <g filter="url(#dropShadow)">
+    <text x="600" y="215" text-anchor="middle" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="0.4">PostScript Interpreters • PCL 5/6 Renderers • RIP Pipelines • Open Print Ecosystems</text>
+  </g>
+
+  <!-- Features Line -->
+  <g filter="url(#dropShadow)">
+    <text x="600" y="260" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" letter-spacing="0.2">
+      ⚡ Enterprise SaaS Platforms &amp; Commercial RIPs  •  🦀 Pure-Rust &amp; Modern C++ Runtimes  •  🖨️ Zero-Lockin Print Spooling
+    </text>
+  </g>
+
+  <!-- Accent Underline Glow -->
+  <rect x="420" y="285" width="360" height="2" rx="1" fill="url(#laserBeam)" />
+</svg>
