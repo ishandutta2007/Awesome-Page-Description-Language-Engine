@@ -28,7 +28,7 @@
 - [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
 - [🏢 SaaS & Commercial Hosted Platforms](#-saas--commercial-hosted-platforms)
 - [💻 Open-Source PDL & RIP Engines](#-open-source-pdl--rip-engines)
-  - [⭐ Open-Source Projects (Ranked by GitHub Stars)](#-open-source-projects-ranked-by-github-stars)
+  - [⭐ Open-Source Projects (Ranked by GitHub_Stars)](#-open-source-projects-ranked-by-github-stars)
   - [🧩 Architectural Comparison & Implementation Insights](#-architectural-comparison--implementation-insights)
 - [🛠️ How to Contribute](#️-how-to-contribute)
 - [⚖️ Disclaimer & Licensing Caveats](#️-disclaimer--licensing-caveats)
@@ -72,9 +72,9 @@ The following table summarizes enterprise SaaS, cloud rendering APIs, and commer
 
 ## 💻 Open-Source PDL & RIP Engines
 
-### ⭐ Open-Source Projects (Ranked by GitHub Stars)
+### ⭐ Open-Source Projects (Ranked by GitHub_Stars)
 
-Below is the complete catalog of active open-source PostScript interpreters, PCL renderers, PDF processors, and print pipeline utilities, strictly sorted descending by GitHub star count:
+Below is the complete catalog of active open-source PostScript interpreters, PCL renderers, PDF processors, and print pipeline utilities, strictly sorted descending by GitHub Stars_Count:
 
 1. [**pdfcpu**](https://github.com/pdfcpu/pdfcpu) [![Stars](https://img.shields.io/github/stars/pdfcpu/pdfcpu?style=social&color=white)](https://github.com/pdfcpu/pdfcpu/stargazers) — **Pure Go PDF & Page Description Engine.**
    - **License:** Apache-2.0
@@ -218,7 +218,7 @@ We welcome community additions of new open-source PDL interpreters, commercial R
 
 1. 🍴 **Fork the repository** on GitHub.
 2. 🌿 **Create a dedicated branch**: `git checkout -b feature/add-new-pdl-engine`.
-3. 📝 **Add entries to `README.md`**: Follow the established table or open-source list format (include exact pricing/limits for SaaS, or valid GitHub link and star count for OSS).
+3. 📝 **Add entries to `README.md`**: Follow the established table or open-source list format (include exact pricing/limits for SaaS, or valid GitHub link and Stars_Count for OSS).
 4. 🧪 **Verify links & markdown formatting**.
 5. 🚀 **Submit a Pull Request** with a concise summary of the additions.
 
